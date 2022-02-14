@@ -4,7 +4,7 @@ RUN apk update \
   && apk add --virtual build-dependencies git \
   && apk add bash curl jq \
   && go get -u github.com/fullstorydev/grpcurl \
-  && go install github.com/fullstorydev/grpcurl/cmd/grpcurl \
+  && go install github.com/fullstorydev/grpcurl/cmd/grpcurl@latest \
   && rm -rf /go/pkg \
   && rm -rf /go/src \
   && apk del build-dependencies \
